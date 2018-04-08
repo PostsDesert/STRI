@@ -75,7 +75,8 @@ class Setup {
         console.log(`Email: ${data['primary_email']}`)
         console.log(`Graduation Year: ${data['grad_year']}`)
         const verifySchoologyUserId = await inquirer.verifySchoologyUserId()
-        if (verifySchoologyUserId['answer'] === 'y') {
+        console.log(verifySchoologyUserId['answer'])
+        if (verifySchoologyUserId['answer'].charAt(0).toLowerCase() === 'y') {
           this.schoologyUserId = schoologyUserId
           this.tickTickLogin()
         } else {
@@ -132,7 +133,7 @@ class Setup {
 
   async crontabPreference () {
     const response = await inquirer.getCrontabPreference()
-    if (response['answer'] === 'y') {
+    if (response['answer'].charAt(0).toLowerCase() === 'y') {
       const command = files.projectPath + '/STRI/stri.js'
       let stdout = execSync(`bash -c 'cat <(fgrep -i -v "${command}" <(crontab -l)) <(echo "0 15 * * * ${command}") | crontab -'`)
       if (stdout.error) {

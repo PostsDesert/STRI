@@ -1,6 +1,9 @@
 # User specific config
 STRI/config.json
 
+# .DS_Store
+.DS_Store
+
 # Logs
 logs
 *.log

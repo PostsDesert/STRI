@@ -142,4 +142,3 @@ const crontabPreference = async () => {
   console.log(`${chalk.green.bold('Schoology to TickTick Reminder Intergration is now configured.')}`)
 }
 schoologyKeys()
-// crontabPreference()

@@ -1,0 +1,29 @@
+{
+  "name": "schoologyticktickreminderintergration",
+  "version": "1.0.0",
+  "description": "Schoology TickTick Reminder Intergration",
+  "main": "setup.js",
+  "keywords": [
+    "Schoology",
+    "TickTick",
+    "Reminders"
+  ],
+  "dependencies": {
+    "bson-objectid": "^1.2.2",
+    "chalk": "^2.3.0",
+    "clear": "0.0.1",
+    "figlet": "^1.2.0",
+    "inquirer": "^5.0.1",
+    "minimist": "^1.2.0",
+    "moment": "^2.21.0",
+    "oauth": "^0.9.15",
+    "request": "^2.85.0",
+    "ticktick-api": "^1.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Griffith Baker",
+  "license": "ISC"
+}

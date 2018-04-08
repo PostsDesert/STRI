@@ -138,6 +138,7 @@ const crontabPreference = async () => {
       console.log('Error making crontab. Please open a github issue')
     }
   }
+  console.log('Crontab Added')
   console.log('')
   console.log(`${chalk.green.bold('Schoology to TickTick Reminder Intergration is now configured.')}`)
 }

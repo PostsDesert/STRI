@@ -1,5 +1,5 @@
 # STRI - Schoology TickTick Reminder Intergration
-<p align="center"><img src="https://raw.githubusercontent.com/PostsDesert/STRI/master/pictures/TickTickSmall.png" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/PostsDesert/STRI/master/picture/TickTickSmall.png" /></p>
 A simple script that fetches your schoology events and upcoming assignments and adds them to TickTick.
 
 ## Setup

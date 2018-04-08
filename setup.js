@@ -146,7 +146,7 @@ class Setup {
     console.log('')
     console.log(`${chalk.green.bold('Schoology to TickTick Reminder Intergration is now configured.')}`)
     console.log('STRI will now run in the background to sync your tasks.')
-    let runSTRI = execSync(`bash -c '${command}`)
+    let runSTRI = execSync(`bash -c '${command}'`)
     if (runSTRI.error) {
       console.error(runSTRI.error)
       console.log('Error running STRI. Please open a github issue')

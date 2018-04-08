@@ -75,7 +75,6 @@ class Setup {
         console.log(`Email: ${data['primary_email']}`)
         console.log(`Graduation Year: ${data['grad_year']}`)
         const verifySchoologyUserId = await inquirer.verifySchoologyUserId()
-        console.log(verifySchoologyUserId['answer'])
         if (verifySchoologyUserId['answer'].charAt(0).toLowerCase() === 'y') {
           this.schoologyUserId = schoologyUserId
           this.tickTickLogin()

@@ -133,6 +133,7 @@ class Setup {
 
   async crontabPreference () {
     const response = await inquirer.getCrontabPreference()
+    const command = files.projectPath + '/STRI/stri.js'
     if (response['answer'].charAt(0).toLowerCase() === 'y') {
       const command = files.projectPath + '/STRI/stri.js'
       let stdout = execSync(`bash -c 'cat <(fgrep -i -v "${command}" <(crontab -l)) <(echo "0 15 * * * ${command}") | crontab -'`)
@@ -144,6 +145,12 @@ class Setup {
     console.log('Crontab Added')
     console.log('')
     console.log(`${chalk.green.bold('Schoology to TickTick Reminder Intergration is now configured.')}`)
+    console.log('STRI will now run in the background to sync your tasks.')
+    let runSTRI = execSync(`bash -c '${command}`)
+    if (runSTRI.error) {
+      console.error(runSTRI.error)
+      console.log('Error running STRI. Please open a github issue')
+    }
   }
 }
 
